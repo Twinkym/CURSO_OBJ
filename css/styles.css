@@ -1,0 +1,16 @@
+@charset "utf-8";
+@import 'anime.css';
+@import 'text.css';
+@import 'nieve.css';
+
+body{
+    background-color: blueviolet;
+}
+
+.caja{
+    width: 9.38em;
+    height: 9.38em;
+    background-color: red;
+    margin: 0.5em;
+    /* float: left; */
+}

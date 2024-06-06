@@ -1,0 +1,311 @@
+@charset "utf-8";
+
+
+
+#caja1:hover{
+    animation-name: Animacion1;
+    animation-duration: 1s;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+}
+
+#caja2:hover{
+    animation-name: Animacion2;
+    animation-duration: 1s;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+}
+
+#caja3:hover{
+    animation: mover;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+#caja4:hover{
+    animation: DesplazarX 1s infinite alternate ease-in-out forwards;
+}
+
+#caja5:hover{
+    animation: Chicle 1s infinite alternate ease-in-out forwards;
+}
+
+#caja6:hover{
+    animation: rotar 1s infinite alternate ease-in-out;
+}
+
+#caja7:hover{
+    animation: cartel 1s infinite alternate ease-in-out;
+}
+
+#caja8:hover{
+    animation: vaiven 1s infinite alternate ease-in-out;
+}
+
+#caja9:hover{
+    animation: descolgar 1s infinite alternate ease-in-out;
+}
+
+#caja10:hover{
+    animation: rotationIn 1s infinite alternate ease-in-out;
+}
+
+#caja11:hover{
+    animation: rotationOut 1s infinite alternate ease-in-out;
+}
+
+#caja12:hover{
+    animation: giro3d 4s infinite alternate ease-in-out;
+}
+
+@keyframes Animacion1{
+    from{
+        background-color:  red;
+    }
+    to{
+        background-color: green;
+    }
+}
+
+@keyframes Animacion2{
+    10%{
+        width: 9.38em;
+    }    
+    20%{
+        width: 18.75em;
+    }
+    30%{
+        width: 9.38em;
+    }
+    40%{
+        width: 18.75em;
+    }
+    50%{
+        width: 9.38em;
+    }
+    60%{
+        width: 18.75em; 
+    }
+    70%{
+        width: 9.38em;
+    }
+    80%{
+        width: 18.75em;
+    }
+    90%{
+        width: 9.38em;
+    }
+    100%{
+        width: 18.75em;
+    }
+}
+
+@keyframes mover{
+    from{
+        background-color: red;
+        top: 0;
+        left: 0;
+    }
+    to{
+        background-color: blue;
+        top:-50px;
+        box-shadow: 15px 15px 10px black;
+    }
+}
+
+@keyframes DesplazarX{
+    from{
+        margin-left: 0;
+    }
+    to{
+        margin-left: 50%;
+    }
+}
+
+@keyframes Chicle {
+    30%{
+        transform: scaleX(1.25)
+        scaleY(0.75);
+    }
+
+    40%{
+        transform: scaleX(0.75)
+        scaleY(1.25);
+    }
+
+    60%{
+        transform: scaleX(1.15)
+        scaleY(.85) ;
+    }
+}
+
+@keyframes rotar{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes cartel {
+    25%{
+        transform: rotate(15deg);
+    }
+
+    45%{
+        transform: rotate(-10deg);
+    }
+
+    65%{
+        transform: rotate(15deg);
+    }
+
+    85%{
+        transform: rotate(-3deg);
+    }
+}
+
+@keyframes descolgar {
+    20%,60%{
+        transform: rotate(80deg);
+    }
+
+    40%,80%{
+        transform: rotate(60deg);
+    }
+
+    80%{
+        opacity:1;
+    }
+
+    100%{
+        transform: translateY(200px);
+        opacity: 0;
+    }
+}
+
+@keyframes vaiven {
+    15%{
+        transform: rotate(-10deg)
+        translateX(-25%);
+    }
+
+    30%{
+        transform: rotate(5deg)
+        translateX(20%);
+    }
+
+    45%{
+        transform: rotate(-3deg)
+        translateX(-10%);
+    }
+
+    60%{
+        transform: rotate(2deg)
+        translateX(5%);
+    }
+
+    70%{
+        transform: rotate(-1deg)
+        translateX(-3%);
+    }
+}
+
+@keyframes rotationIn {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%) rotate(-260deg);
+    }
+}
+
+@keyframes rebote {
+    20%{
+        transform: translateY(0px);
+    }
+
+    30%{
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes reboteInPlus {
+    0%{
+        transform: translateX(-2000px);
+    }
+
+    50%{
+        transform: translateX(500px);
+    }
+
+    70%{
+        transform: translateX(-10px);
+    }
+}
+
+@keyframes giro3d {
+    40%{
+        transform: perspective(100px)
+        translateZ(120px)
+        rotateY(170deg) rotateX(80deg) rotateZ(10deg) translateX(-50px) rotate(-10deg) rotateX(-10deg);
+    }
+
+    50%{
+        transform: perspective(100px)
+        translateZ(120px)
+        rotateY(190deg) rotateX(80deg) rotateZ(10deg) translateX(-50px) rotate(-10deg) rotateX(-10deg);
+    }
+
+    80%{
+        transform: perspective(100px)
+        translateZ(0px)
+        rotateY(360deg) rotateX(80deg) rotateZ(10deg) translateX(-50px) rotate(-10deg) rotateX(-10deg);
+    }
+
+    100%{
+        transform: perspective(100px)
+        translateZ(120px)
+        rotateY(360deg) rotateX(80deg) rotateZ(10deg) translateX(-50px) rotate(-10deg) rotateX(-10deg);
+    }
+}
+
+@keyframes giro3d2 {
+    40%{
+        transform: perspective(100px)
+        translateZ(120px)
+        rotateY(170deg) rotateX(80deg) rotateZ(10deg) translateX(-50px) rotate(-10deg) rotateX(-10deg);
+    }
+
+    50%{
+        transform: perspective(100px)
+        translateZ(120px)
+        rotateY(190deg) rotateX(80deg) rotateZ(10deg) translateX(-50px) rotate(-10deg) rotateX(-10deg);
+    }
+
+    80%{
+        transform: perspective(100px)
+        rotateY(360deg) rotateX(80deg) rotateZ(10deg) translateX(-50px) rotate(-10deg) rotateX(-10deg) translateZ(120px) rotateY(360deg) rotateX(80deg) rotateZ(10deg) translateX(-50px) rotate(-10deg) rotateX(-10deg)
+        translateZ(0px);
+    }
+
+    100%{
+        transform: perspective(100px)
+        rotateY(360deg);
+    }
+    
+}
+
+@keyframes FadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    100%{
+        opacity: 0;
+    }
+}

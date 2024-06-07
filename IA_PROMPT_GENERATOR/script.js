@@ -14,5 +14,5 @@ function showTextArea(value) {
 
 function generar() {
     const prompt = document.getElementById("text2").value = " ";
-    const url = 
+    const url = '';
 }

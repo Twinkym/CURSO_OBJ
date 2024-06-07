@@ -23,11 +23,12 @@
         <div class="row">
             <div class="col-lg-6">
                 <form action="generador.php" method="post">
-                    <label for="">Acción: <span><a data-bs-toggle="collapse" href="#iaccion">?</a></span></label>
+                    <div class="card">
+                    <label for="" class="col-form-label">Acción: <span><a class="btn btn-info" data-bs-toggle="collapse" href="#iaccion" role="button" >?</a></span></label>
                     <div id="iaccion" class="collapse">
                         <p>¿Qué quieres que haga el LLM? ¿Escribir un poema? ¿Traducir un texto? ¿Responder a una pregunta? Define claramente la acción deseada.</p>
                     </div>
-                    <textarea name="" id="" cols="30" rows="10" ></textarea>
+                    <textarea  class="form-control" name="" id="" rows="3" ></textarea>
                 </form>
             </div>
             <div class="col-lg-6">

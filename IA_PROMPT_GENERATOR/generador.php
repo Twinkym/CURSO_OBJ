@@ -3,7 +3,7 @@
 if(isset($_GET['prompt']) && $_GET['prompt'] != "") {
     $prompt = $_GET['prompt'];
     
-    $api_key = "YOUR_API_KEY";
+    $api_key = "sk-generator-YawXrGuzYr8Ecr3UBtPvT3BlbkFJYOErHuhLL1xa33wuBkfZ";
 
     $data = [
         "prompt" => $prompt,

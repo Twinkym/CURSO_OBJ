@@ -13,6 +13,7 @@ function showTextArea(value) {
 
 
 function generar() {
-    const prompt = document.getElementById("text2").value = " ";
-    const url = '';
+    const prompt = document.getElementById("text2").value;
+    const url = 'generador.php?prompt=${encodeURIComponent(prompt)}';
+    window.open(url, 'ChatGPT', 'width=800,height=600');
 }

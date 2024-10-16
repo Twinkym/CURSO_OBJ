@@ -1,0 +1,37 @@
+body{
+    background-color: #000000;
+    background-image: url();
+}
+
+header{
+    position: sticky;
+    top: 0 !important;
+    z-index: 1000;
+    text-align: center;
+}
+
+.logo{
+    width: 10dvw;
+    height: 10dvh;
+    border-radius: 50px;
+    /* float: inline-start; */
+}
+
+.h2{
+    width: 30vw;
+    color: white;
+}
+#lside{
+    width: 30vw;
+    background-color: aqua;
+}
+
+#form{
+    width: 33vw;
+    background-color: bisque;
+}
+
+#rside{
+    width: 33vw;
+    background-color: aqua;
+}

@@ -1,0 +1,79 @@
+<?php     
+    if($_GET){
+        if(isset($_GET['action']) && !empty($_GET['action'])){
+            if($_GET['action'] == 'cerrar'){
+                session_start();
+                unset($_SESSION);
+                session_destroy();
+            }
+        }
+    }
+
+   if($_POST){
+     if(isset($_POST['action']) && !empty($_POST['action'])){
+        if($_POST['action'] == 'FORM_LOGIN' ){
+            // definir la acción
+            $dbuser = "root";
+            $dbpass = "1234";
+            if($_POST['user'] == $dbuser && $_POST['pass'] == $dbpass){
+                session_start();
+                $_SESSION['user'] = $dbuser;
+                $_SESSION['color'] = 'green';
+            }
+            else
+            {
+                echo "seguiriamos en el login.";
+            }
+        }
+     }
+   }
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php
+   
+    
+    if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
+            include "privado.php";
+    }   
+    else{
+        include "login.php";
+    }
+
+
+    ?>
+</body>
+</html>
+
+<h5>Formuliario de Acceso</h5>
+<form class="form-control" method="post" action="#">
+    <input class="form-control" type="text" name="user" placeholder="Nombre de usuario:"  required />
+    <br>
+    <input class="form-control" type="password" name="pass" placeholder="Contraseña"  required/>
+    <br>
+    <input type="hidden" name="action" value="FORM_LOGIN" />
+    <br>
+    <input class="btn btn-primary" type="submit" value="LOGIN" />
+    <input class="btn btn-danger" type="reset" value="RESET" />
+</form>
+
+
+
+
+
+
+
+<h3>Zona Privada</h3>
+<a href="index.php?action=cerrar">CERRAR</a>
+<p <?php echo 'style="color:'.$_SESSION['color'].'"'?>>
+    <?php echo "Hola SR. ".$_SESSION['user']; ?>
+</p>
+
+<?php echo '<div style="color:'.$_SEESION['color'].'">'.$_SEESION['color'].'</div>';
